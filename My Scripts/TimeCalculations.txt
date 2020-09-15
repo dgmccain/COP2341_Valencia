@@ -1,0 +1,13 @@
+PSEUDO CODE FOR GRAPHING ECLIPSE DATA
+
+take time (given in ms) and subtract original timestamp to find difference
+divide by 1,000 to get the new time (in s)
+
+seconds / 60 / 60 = time in hours as whole number.
+Take resulting decimal and multiply it by 60 to get time in minutes as whole number.
+Take resulting decimal and multiply it by 60 to get time in seconds.
+
+add the new HH:MM:SS values to original time of 13:04:42.
+Ex. timestamp 20073161 will convert to 2:39:22 difference to get new timestamp of 15:44:04
+
+plot the points of brightness with converted timestamp(s) using gnuplot
