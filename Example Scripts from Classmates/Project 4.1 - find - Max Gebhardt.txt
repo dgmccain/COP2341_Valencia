@@ -1,0 +1,58 @@
+# =============================================================================
+# TITLE:		find
+# ASSIGNMENT:	Project 4.1 - Bash command examples and help
+# COURSE:		Linux Shell Scripting (COP 2341C)
+# PROFESSOR:	Prof. Jerry Reed
+# AUTHOR:		Max Gebhardt
+# DATE:			2019-09-18
+# =============================================================================
+
+
+# =====================================================================
+# One or more web links providing a tutorial or example of the command.
+# =====================================================================
+https://www.gnu.org/software/findutils/manual/html_node/find_html/index.html
+https://www.tecmint.com/35-practical-examples-of-linux-find-command/
+https://unix.stackexchange.com/questions/223772/how-to-search-with-gnu-find-for-several-file-types-at-a-time/223775
+
+# =================================================
+# First screen of output from: man for your_command
+# =================================================
+FIND(1)                   BSD General Commands Manual                  FIND(1)
+
+NAME
+     find -- walk a file hierarchy
+
+SYNOPSIS
+     find [-H | -L | -P] [-EXdsx] [-f path] path ... [expression]
+     find [-H | -L | -P] [-EXdsx] -f path [path ...] [expression]
+
+DESCRIPTION
+     The find utility recursively descends the directory tree for each path
+     listed, evaluating an expression (composed of the ``primaries'' and
+     ``operands'' listed below) in terms of each file in the tree.
+
+     The options are as follows:
+
+# ===================================================================
+# First screen of output from: running your command with no arguments
+# ===================================================================
+usage: find [-H | -L | -P] [-EXdsx] [-f path] path ... [expression]
+       find [-H | -L | -P] [-EXdsx] -f path [path ...] [expression]
+
+# ==============================================================================================
+# First screen of output from: running your command with the -h or --help options, if available.
+# ==============================================================================================
+Not available. This only prints an error message plus the "usage" message.
+
+# =========================================================
+# First screen of output from: running info on your command
+# =========================================================
+Same documentation as `man find`. (At least for me under macOS. I believe Linux utilizes the "info" command/documentation more so than BSD does.)
+
+# ==================================================
+# A simple example of using the command you claimed.
+# ==================================================
+Find all of the files in the current working directory that have been modified within the past day and a half, digging down at most three additional directories, listing only directories and normal files.
+
+find . -mtime "-1d12h" -maxdepth 3 \( -type d -o -type f \)
